@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>all post</title>
+</head>
+
+<body>
+    <div class="main m-10">
+       <div class=" m-4 ">
+        <a href="/profile" class="bg-yellow-500 rounded-lg p-2 text-white ">back to profile</a>
+        <a href="/login" class="bg-red-500 rounded-lg p-2 text-white">logout</a>
+        <h1 class="font-bold text-3xl mt-4">welcome</h1>
+       </div>
+
+
+        <div class="mt-4">
+            <% all.reverse().forEach(function(allpost){ %>
+
+                <h3 class="font-bold "></h3>
+                <div class="postcontainer border border-black h-24 w-96 m-4 rounded-lg bg-zinc-100 ">
+                    <h4 class="text-blue-500 ml-4 font-bold">@ <%= allpost.user.name; %>
+                    </h4>
+
+                    <p class="ml-4 tracking-tight">
+                        <%= allpost.content %>
+                    </p>
+                </div>
+
+                <% }) %>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
